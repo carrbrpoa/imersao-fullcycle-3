@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: appweb
-          image: carrbrpoa/fullcycle-challenge3-app:latest
+          image: carrbrpoa/fullcycle-challenge3-app:k8s
           ports:
             - containerPort: 3001
