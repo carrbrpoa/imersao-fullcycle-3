@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appapi
+  template:
+    metadata:
+      labels:
+        app: appapi
+    spec:
+      containers:
+        - name: appapi
+          image: carrbrpoa/fullcycle-challenge3-api:latest
+          ports:
+            - containerPort: 3000

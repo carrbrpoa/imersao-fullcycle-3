@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appweb
+  template:
+    metadata:
+      labels:
+        app: appweb
+    spec:
+      containers:
+        - name: appweb
+          image: carrbrpoa/fullcycle-challenge3-app:latest
+          ports:
+            - containerPort: 3001
