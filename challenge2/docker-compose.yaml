@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    container_name: challenge2app
+    build: ./challenge2-app
+    ports:
+      - "3001:3001"
+    #volumes:
+    #  - .:/go/src/
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  api:
+    container_name: challenge2api
+    build: ./challenge2-api
+    ports:
+      - "3000:3000"
+    #volumes:
+    #  - .:/go/src/
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"

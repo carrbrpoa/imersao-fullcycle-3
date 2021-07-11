@@ -3,7 +3,7 @@ import Head from 'next/head'
 export async function getServerSideProps () {
     // Call an external API endpoint to get routes.
     // You can use any data fetching library
-    const res = await fetch('http://localhost:3000/routes')
+    const res = await fetch('http://host.docker.internal:3000/routes')
     const data = await res.json()
 
     if (!data) {
